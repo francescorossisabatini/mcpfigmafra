@@ -10,6 +10,7 @@ export * from './params/create/create-text.js';
 export * from './params/create/create-instance.js';
 export * from './params/create/add-component-property.js';
 export * from './params/create/create-component.js';
+export * from './params/create/create-image.js';
 
 // Read
 export * from './params/read/get-node-info.js';
