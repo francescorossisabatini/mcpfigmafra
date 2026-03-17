@@ -11,11 +11,13 @@ export * from './params/create/create-instance.js';
 export * from './params/create/add-component-property.js';
 export * from './params/create/create-component.js';
 export * from './params/create/create-image.js';
+export * from './params/create/create-color-style.js';
 
 // Read
 export * from './params/read/get-node-info.js';
 export * from './params/read/get-all-components.js';
 export * from './params/read/get-pages.js';
+export * from './params/read/get-local-variables.js';
 
 // Delete
 export * from './params/delete/delete-node.js';
@@ -33,4 +35,6 @@ export * from './params/update/edit-component-property.js';
 export * from './params/update/set-instance-properties.js';
 export * from './params/update/set-node-component-property-references.js';
 export * from './params/update/set-parent-id.js';
+export * from './params/update/set-fill-variable.js';
+export * from './params/update/set-stroke-variable.js';
 
