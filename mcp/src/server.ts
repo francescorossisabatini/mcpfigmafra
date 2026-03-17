@@ -33,6 +33,9 @@ import { setNodeComponentPropertyReferences } from "./tools/update/set-node-comp
 import { getPages } from "./tools/read/get-pages.js";
 import { createImage } from "./tools/create/create-image.js";
 import { createColorStyle } from "./tools/create/create-color-style.js";
+import { getLocalVariables } from "./tools/read/get-local-variables.js";
+import { setFillVariable } from "./tools/update/set-fill-variable.js";
+import { setStrokeVariable } from "./tools/update/set-stroke-variable.js";
 
 export async function getServer(server: Server): Promise<McpServer> {
 
@@ -63,6 +66,7 @@ export async function getServer(server: Server): Promise<McpServer> {
     getNodeInfo(mcpServer, taskManager);
     getAllComponents(mcpServer, taskManager);
     getPages(mcpServer, taskManager);
+    getLocalVariables(mcpServer, taskManager);
 
     // Update tools
     moveNode(mcpServer, taskManager);
@@ -75,6 +79,8 @@ export async function getServer(server: Server): Promise<McpServer> {
     setInstanceProperties(mcpServer, taskManager);
     setParentId(mcpServer, taskManager);
     setNodeComponentPropertyReferences(mcpServer, taskManager);
+    setFillVariable(mcpServer, taskManager);
+    setStrokeVariable(mcpServer, taskManager);
     // Delete tools
     deleteNode(mcpServer, taskManager);
     deleteComponentProperty(mcpServer, taskManager);
